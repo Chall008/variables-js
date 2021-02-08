@@ -149,16 +149,18 @@ function main() {
   let largest = numbers[0]
   let total = 0
   let count = 0
+  let countOfEven = 0
+  let sumOfOdd = 0
   for (let index = 0; index < numbers.length; index++) {
     if (smallest > numbers[index]) smallest = numbers[index]
 
     if (largest < numbers[index]) largest = numbers[index]
 
+    // sumOfOdd = numbers.filter((a, index) => index % 2 === 1)
+    // countOfEven = numbers.filter(( index) => index % 2 === 0)
     total += numbers[index]
     count++
   }
-  console.log(smallest)
-  console.log(largest)
   let statistics = {
     min: smallest,
     max: largest,
